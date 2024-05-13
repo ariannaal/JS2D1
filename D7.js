@@ -78,7 +78,6 @@ function numeri(n) {
     return plusN;
 })
 console.log(newArray)
-  
 }
 
 numeri(5)
@@ -89,9 +88,31 @@ numeri(5)
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+function stringhe(arrayStringhe) {
+  return arrayStringhe.map(function (stringa) {
+    return stringa.length
+  })
+}
+
+const arrayStringhe = ["EPICODE", "is", "great"]
+const length = stringhe(arrayStringhe)
+console.log(length)
+
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+/* function numeriDispari() {
+  const arrayDispari = [];
+  for (let index = 1; index < 99; index += 2) {
+    arrayDispari.push(index)
+  }
+  console.log(arrayDispari.push(index))
+  return arrayDispari
+} */
+
+
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -212,6 +233,19 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+
+function findOldestMovie(movies) {
+  const oldestMovie = movies[0];
+  movies.forEach(function (film) {
+    if (film.year < oldestMovie.year) {
+      oldestMovie = film
+    }
+  })
+  return oldestMovie
+}
+   const oldestMovie = findOldestMovie(movies);
+console.log(oldestMovie.Title)
+
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
