@@ -50,6 +50,19 @@ console.log("I numeri pari sono:", filteredArray)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+const numeri2 = [32, 86, 30, 2];
+
+function eseguiSomma(array) {
+  let somma = 0;
+  array.forEach(function (el) {
+    somma += el;
+  })
+  return somma;
+}
+
+const numeriSommati = eseguiSomma(numeri2);
+console.log(numeriSommati);
+
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -57,6 +70,19 @@ console.log("I numeri pari sono:", filteredArray)
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+function numeri(n) {
+  const arrayNumbers = [2, 45, 67, 93, 29, 14];
+  const newArray = arrayNumbers.map(function (element) {
+    const plusN = element + n;
+    return plusN;
+})
+console.log(newArray)
+  
+}
+
+numeri(5)
+
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
